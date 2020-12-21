@@ -1,2 +1,2 @@
-# SRE_EX
-Example of Devops skills
+# Python Web App
+Web App calls out to an api deployed via Docker
