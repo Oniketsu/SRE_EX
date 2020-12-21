@@ -1,15 +1,8 @@
-FROM python:3.8.0
+FROM node:alpine
+WORKDIR '/app'
 
-WORKDIR /user/src/app
+COPY package.json .
 
-COPY './requirements.txt' .
-
-RUN pip install --upgrade pip
-
-RUN pip install -r requirements.txt
-
+RUN npm install
 COPY . .
-
-EXPOSE 80
-
-ENTRYPOINT [ "python", "app.py" ]
+CMD ["npm", "start"]
