@@ -10,3 +10,7 @@ RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
 CMD [ "app.py" ]
+
+LABEL maintainer="oniketsu"\
+	name="flaskapp"\
+	version="1.0"
